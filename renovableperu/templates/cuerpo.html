@@ -1,0 +1,449 @@
+{% load staticfiles i18n %} 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/ico" href="{% static 'img/rp-ico.ico' %}">
+
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
+ 
+
+
+
+
+
+
+
+
+
+
+  <title>Renovable Perú</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--link href="{% static 'css/blog-home.css' %}" rel="stylesheet"-->
+
+</head>
+
+<body>
+
+  <!-- 
+-->
+ <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">RENOVABLE PERÚ</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'pres' %}">PRESENTACIÓN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Recorrido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">LogOut</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'panel' %}">
+              {% if request.user.pk > 0  %}
+                    {{ user}}
+              {% else %}
+                      <i class="fas fa-user-shield"></i>
+              {% endif %}
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+  <!-- Page Content -->
+  .<br><br><br><br><br>
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8 border">
+
+
+
+
+
+        <h1 class="my-4">Renovable Perú
+          <small>por un mundo mejor!!</small>
+        </h1><br>
+
+
+        {% block panel-btn %}
+        <br>
+        <a href="{% url 'por_reg1' %}" class="btn btn-outline-success form-control">registrar Portafolio</a>
+        <br><br>
+        <a href="{% url 'por_reg1' %}" class="btn btn-outline-success form-control">registrar Portafolio</a>
+        <br><br>
+        <a href="{% url 'por_reg1' %}" class="btn btn-outline-success form-control">registrar Portafolio</a>
+        <br><br>
+        <a href="{% url 'por_reg1' %}" class="btn btn-outline-success form-control">registrar Portafolio</a>
+        <br>
+
+        {% endblock panel-btn %}
+
+
+
+
+
+  {% block card-body-1 %}
+    <div class="card">
+      <div class="card-header">
+        <p style="color: #4CA335; font-weight: bold; font-size:1.1em;">REGISTRAR EXPERIENCIA</p>
+      </div>
+
+      <div class="card-body">
+
+          <div class="row">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">TÍTULO</p>
+            </div>
+            <div class="col-9">
+              <input id="p_tit" type="text" class="form-control" placeholder="TÍTULO DEL PROYECTO...">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">TÍTULAR </p>
+            </div>
+            <div class="col-9">
+              <input id="p_titu" type="text" class="form-control"  placeholder="TÍTULAR DEL PROYECTO (máximo 100 letras)...">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">DESCRIPCIÓN</p>
+            </div>
+            <div class="col-9">
+              <textarea id="p_desc" type="text" class="form-control" placeholder="UNA DESCRIPCIÓN BREVE (máximo 10 linias)..."></textarea>
+            </div>
+          </div>
+
+          <div class="row mt-1">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">LUGAR</p>
+            </div>
+            <div class="col-9">
+              <input id="p_lug" type="text" class="form-control" placeholder="DONDE SE REALIZÓ (máximo 1 linia)..."></input>
+            </div>
+          </div>
+
+          <div class="row mt-1">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">CALIFICACIÓN</p>
+            </div>
+            <div class="col-9">
+              <input id="p_cal" step="1" min="0" max="9" type="range" class="form-control">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">CATEGORÍA</p>
+            </div>
+            <div class="col-9">
+              <input id="p_cat" type="text" class="form-control" placeholder="CATEGORÍA...">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">FECHA</p>
+            </div>
+            <div class="col-5">
+              <input id="p_fec" type="date" class="form-control">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #8BD577; font-weight: bold; font-size:1.1em;">IMAGEN</p>
+            </div>
+            <div class="col-9">
+             <input type="file" name="foto" class="btn-block" accept="image/*" required="" id="id_foto">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <a  onclick='GuardarPor()' class="btn btn-outline-success form-control">GUARDAR EXPERIENCIA</a>
+
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  {% endblock card-body-1 %}
+
+
+
+
+
+
+
+{% block card-body-2 %}
+    <br>
+    <div class="card">
+      <div class="card-header">
+        <p style="color: #F58235; font-weight: bold; font-size:1.1em;">REGISTRAR PRODUCTO</p>
+      </div>
+
+      <div class="card-body">
+
+          <div class="row">
+            <div class="col-3  text-right">
+              <p style="color: #F58235; font-weight: bold; font-size:1.1em;">NOMBRE</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" placeholder="NOMBRE DEL PRODUCTO...">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #F58235; font-weight: bold; font-size:1.1em;">TÍTULAR </p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control"  placeholder="TÍTULAR DEL PRODUCTO (máximo 20 palabras)...">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #F58235; font-weight: bold; font-size:1.1em;">DESCRIPCIÓN</p>
+            </div>
+            <div class="col-9">
+              <textarea type="text" class="form-control" placeholder="DESCRIPCIÓN BREVE DEL PRODUCTO (máximo 10 linias)..."></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-3  text-right">
+              <p style="color: #F58235; font-weight: bold; font-size:1.1em;">CALIFICACIÓN</p>
+            </div>
+            <div class="col-9">
+              <input step="1" min="0" max="9" type="range" class="form-control">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #F58235; font-weight: bold; font-size:1.1em;">CATEGORÍA</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" placeholder="CATEGORÍA...">
+            </div>
+          </div>
+
+          <div class="row ">
+            <div class="col-3  text-right">
+              <p style="color: #F58235; font-weight: bold; font-size:1.1em;">IMAGEN</p>
+            </div>
+            <div class="col-9">
+              <input type="file">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <a href="#" class="btn btn-outline-warning form-control" style="background-size: #F58235;">GUARDAR PRODUCTO</a>
+            </div>
+          </div>
+
+      </div>
+    </div>
+{% endblock card-body-2 %}
+
+
+
+
+
+
+{% block card-body-3 %}
+    <br>
+    <div class="card">
+      <div class="card-header">
+        <p style="color: #38844D; font-weight: bold; font-size:1.1em;">REGISTRAR MAS..</p>
+      </div>
+
+      <div class="card-body">
+          Pronto registraremos mas cosas ...     
+      </div>
+    </div>
+{% endblock card-body-3 %}
+<br>
+
+
+</div>
+
+
+      <!-- Sidebar Widgets Column -->
+  {% block notif %}
+      <div class="col-md-4">
+
+        <!-- Side Widget -->
+        <div class="alert alert-secondary text-center" role="alert">
+          <i style="color: #139236; font-weight: bold; font-size:1.1em;">NOTIFICACIONES - </i>
+          <span class="badge badge-success">4</span>
+        </div>
+
+        <div class="card my-4">
+          <h5 class="card-header">Últimas consultas ..</h5>
+          <div class="card-body">
+
+
+            <div class="alert alert-secondary" role="alert" style="font-style: italic;">
+              <h4 class="alert-heading">Carlos Antonio!</h4>
+              <p style="line-height:0.9em;">Quiciera tener más infomación sobre los biodigestores familiares, gracias</p>
+              <hr>
+              <p class="mb-0" style="font-size: 0.7em;">Domingo 23/06</p>
+            </div>
+
+
+            <div class="alert alert-secondary" role="alert" style="font-style: italic;">
+              <h4 class="alert-heading">Fernando Cipra!</h4>
+              <p style="line-height:0.9em;">Quiciera tener más infomación sobre los biodigestores familiares, gracias</p>
+              <hr>
+              <p class="mb-0" style="font-size: 0.7em;">Domingo 23/06</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+{% endblock notif %}
+
+    </div>
+    <!-- /.row -->
+
+  </div> <br>
+  <!-- /.container -->
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer fixed-button" style="background: #D7DCDB;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <!--span class="copyright">Copyright &copy; Renovable-Perú 2019</span-->
+          <span class="copyright">Sin &copy; / bajo la licencia MIT</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/user/robertcotrina" target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/robert.cotrina" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#" class="text-secondary" >Volver arriba</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-secondary" >Desarrolladores</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+
+ <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Contact form JavaScript>
+  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'js/contact_me.js' %}"></script -->
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/agency.min.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+
+<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+
+</body>
+
+</html>

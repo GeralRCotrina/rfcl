@@ -1,0 +1,27 @@
+{% extends "cuerpo.html" %} 
+
+
+{% block panel-btn %}
+{% endblock panel-btn %}
+
+
+{% block card-body-1 %}
+<div class="container border">
+	<form method="post"    enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit" class="btn btn-outline-primary form-control">GUARDAR</button><br>
+	</form>
+
+</div>
+{% endblock card-body-1 %}
+
+
+
+
+{% block card-body-2 %}
+{% endblock card-body-2 %}
+
+
+{% block card-body-3 %}
+{% endblock card-body-3 %}
