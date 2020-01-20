@@ -44,7 +44,7 @@ class Panel(View):
 	def get(self, request, *args, **kwargs):
 		dicc={}
 		dicc['msj']= 'Llegó'
-		return render(request,'panel.html',dicc)
+		return render(request,'cuerpo.html',dicc)
 
 	def post(self, request, *args, **kwargs):
 		dicc={}
@@ -58,12 +58,42 @@ class Panel(View):
 			dicc['msj']= 'nda'
 		else:
 			dicc['msj']= 'nusr'
-		return render(request,'panel.html',dicc)
+		return render(request,'cuerpo.html',dicc)
 
 
 
+class PanelPrincipal(View):
+
+	def get(self, request, *args, **kwargs):
+		dicc={}
+		dicc['msj']= 'Llegó'
+		return render(request,'panel/p_prin.html',dicc)
+
+	
 
 
+class Tienda(View):
+
+	def get(self, request, *args, **kwargs):
+		dicc={}
+		dicc['msj']= 'Llegó'
+		return render(request,'tienda/t_prin.html',dicc)
+
+
+class Producto(View):
+
+	def get(self, request, *args, **kwargs):
+		dicc={}
+		dicc['msj']= 'Llegó'
+		return render(request,'tienda/t_prod.html',dicc)
+
+class Carrito(View):
+
+	def get(self, request, *args, **kwargs):
+		dicc={}
+		dicc['msj']= 'Llegó'
+		return render(request,'tienda/t_car.html',dicc)
+		
 
 class PorCreate(CreateView):
 	model=Portafolio

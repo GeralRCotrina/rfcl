@@ -1,7 +1,6 @@
 {% load staticfiles i18n %}
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
   <meta charset="utf-8">
@@ -10,21 +9,21 @@
   <meta name="author" content="">
 
 
-  <link rel="icon" type="image/ico" href="{% static 'img/cber-2.png' %}">
+  <link rel="icon" type="image/ico" href="{% static 'st_i/img/cber-2.png' %}">
   <title>CBer</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'st_i/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'st_i/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
+  <link href="{% static 'st_i/css/agency.min.css' %}" rel="stylesheet">
  
 </head>
 
@@ -33,7 +32,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><i><img src="{% static 'img/cber-2.png' %}" alt="" height="40px"></i>    <i style="color:#FFA82C;">energías  renovables</i></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><i><img src="{% static 'st_i/img/cber-2.png' %}" alt="" height="40px"></i>    <i style="color:#FFA82C;">energías  renovables</i></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -55,17 +54,20 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 't_prin' %}">BODEGA</a>
+          </li>
           
           <li class="list-inline-item mt-2">
               <a class="text-white" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                
-                <img src="{% static 'img/team/cber-t3.png' %}" style="height: 35px;"-expanded="false"> 
+                <img src="{% static 'st_i/img/team/cber-t3.png' %}" style="height: 35px;"-expanded="false"> 
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                
                   {% if request.user.pk > 0 %}
                    <div class="card mb-0" style="height: 240px; width: 200px; margin: 3px;">
-                    <img src="{% static 'img/cber.png' %}" class="w-100 img-thumbnail" style="height: 150px; width: 150px;">
+                    <img src="{% static 'st_i/img/cber.png' %}" class="w-100 img-thumbnail" style="height: 150px; width: 150px;">
                 
                           
                     <div class="card-body m-0 p-0"> 
@@ -78,7 +80,7 @@
                     </div>                             
                   {% else %}
                    <div class="card m-0 p-0" style="height: 310px; width: 200px; margin: 3px;">
-                    <img src="{% static 'img/cber.png' %}" class="w-100 img-thumbnail" style="height: 150px; width: 150px;">
+                    <img src="{% static 'st_i/img/cber.png' %}" class="w-100 img-thumbnail" style="height: 150px; width: 150px;">
                 
                         <div class="card-body"> 
                            <div class="input-group m-1 p-1">
@@ -118,7 +120,7 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in">¡Bienvenido a nuestro estudio!</div>
-        <div class="intro-heading  text-uppercase"><i><img src="{% static 'img/team/cber-t2.png' %}" alt="" height="90px;"></i> energías renovables eirl</div>
+        <div class="intro-heading  text-uppercase"><i><img src="{% static 'st_i/img/team/cber-t2.png' %}" alt="" height="90px;"></i> energías renovables eirl</div>
         <a class="btn btn-outline-success btn-xl text-uppercase js-scroll-trigger" href="#services">Conozcamos un poco mas..</a>
       </div>
     </div>
@@ -144,7 +146,7 @@
           </span>
           <h4 class="service-heading">Productos</h4>
           <p class="text-muted">Contamos con un amplia gama de proveedores de los mejores productos
-           ecologicos para una vida sostenible y rentable.</p>
+           ecológicos para una vida sostenible y rentable.</p>
         </div>
 
 
@@ -154,8 +156,8 @@
             <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
 
           </span>
-          <h4 class="service-heading">Tecnologias</h4>
-          <p class="text-muted">Somos personas en constante formación para estar a la banguardia 
+          <h4 class="service-heading">Tecnologías</h4>
+          <p class="text-muted">Somos personas en constante formación para estar a la vanguardia 
           de los recurso tecnologicos amigables con el medio ambiente.</p>
         </div>
 
@@ -193,7 +195,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/01-thumbnail.jpg' %}" alt="">
+            <img class="img-fluid" src="{% static 'st_i/img/portfolio/01-thumbnail.jpg' %}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Biodigestor Familiar</h4>
@@ -207,7 +209,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/02-thumbnail.jpg' %}" alt="">
+            <img class="img-fluid" src="{% static 'st_i/img/portfolio/02-thumbnail.jpg' %}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Purificador de agua</h4>
@@ -221,7 +223,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/03-thumbnail.jpg' %}" alt="">
+            <img class="img-fluid" src="{% static 'st_i/img/portfolio/03-thumbnail.jpg' %}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Biodigestor de granja</h4>
@@ -235,7 +237,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/04-thumbnail.jpg' %}" alt="">
+            <img class="img-fluid" src="{% static 'st_i/img/portfolio/04-thumbnail.jpg' %}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Cargadores solares</h4>
@@ -249,11 +251,11 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/05-thumbnail.jpg' %}" alt="">
+            <img class="img-fluid" src="{% static 'st_i/img/portfolio/05-thumbnail.jpg' %}" alt="">
           </a>
           <div class="portfolio-caption">
-            <h4>Auditorias</h4>
-            <p class="text-muted">Necesitas un consejo, preguntanos <i class="far fa-smile-wink"></i></p>
+            <h4>Auditorías</h4>
+            <p class="text-muted">Necesitas un consejo, pregúntanos <i class="far fa-smile-wink"></i></p>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -263,7 +265,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/06-thumbnail.jpg' %}" alt="">
+            <img class="img-fluid" src="{% static 'st_i/img/portfolio/06-thumbnail.jpg' %}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>BIODIGESTORES</h4>
@@ -288,7 +290,7 @@
           <ul class="timeline">
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/1.jpg' %}" alt="">
+                <img class="rounded-circle img-fluid" src="{% static 'st_i/img/about/1.jpg' %}" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -302,7 +304,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/2.jpg' %}" alt="">
+                <img class="rounded-circle img-fluid" src="{% static 'st_i/img/about/2.jpg' %}" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -316,7 +318,7 @@
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/3.jpg' %}" alt="">
+                <img class="rounded-circle img-fluid" src="{% static 'st_i/img/about/3.jpg' %}" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -330,7 +332,7 @@
             </li>
             <li class="timeline-inverted">
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/4.jpg' %}" alt="">
+                <img class="rounded-circle img-fluid" src="{% static 'st_i/img/about/4.jpg' %}" alt="">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -344,7 +346,7 @@
             </li>
             <li>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{% static 'img/about/5.jpg' %}" alt="">
+                <img class="rounded-circle img-fluid" src="{% static 'st_i/img/about/5.jpg' %}" alt="">
               </div>
              <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -352,7 +354,7 @@
                   <h6 class="subheading">Biodigestores Familiares, Tecnología Limpia Para Mitigar el Cambio Climático.</h6>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted"> <strong>Robert:</strong> “Este proyecto con la ONG ITDG ahora Soluciones Prácticas <a href="https://www.solucionespracticas.org.pe/"  target="_blank"><i class="fas fa-paperclip"></i></a> se desarrollo la experiencia con la cual entendí, que podemos mejorar nuestro medio ambiente, ahí nació esta pasión que ons motiva”.</p>
+                  <p class="text-muted"> <strong>Robert:</strong> “Este proyecto con la ONG ITDG ahora Soluciones Prácticas <a href="https://www.solucionespracticas.org.pe/"  target="_blank"><i class="fas fa-paperclip"></i></a> se desarrollo la experiencia con la cual entendí, que podemos mejorar nuestro medio ambiente, ahí nació esta pasión que nos motiva”.</p>
                 </div>
               </div>
             </li>
@@ -381,7 +383,7 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/team/cber.png' %}" alt="">
+            <img class="mx-auto rounded-circle" src="{% static 'st_i/img/team/cber.png' %}" alt="">
             <h4>Renovable Perú EIRL</h4>
             <p class="text-muted"  style="line-height:5px;">www.renovableperu.pe</p>
             <ul class="text-center" style="line-height:3px;">
@@ -415,7 +417,7 @@
 
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/team/rfcl.jpg' %}" alt="">
+            <img class="mx-auto rounded-circle" src="{% static 'st_i/img/team/rfcl.jpg' %}" alt="">
             <h4>Robert F. Cotrina</h4>
             <p class="text-muted" style="line-height:5px;">Gerente General</p>
             <ul class="text-center" style="line-height:3px;">
@@ -450,7 +452,7 @@
 
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static 'img/team/grcl.jpg' %}" alt="">
+            <img class="mx-auto rounded-circle" src="{% static 'st_i/img/team/grcl.jpg' %}" alt="">
             <h4>Geral R. Cotrina</h4>
             <p class="text-muted"  style="line-height:3px;">Jefe de TI</p>
             <ul class="text-center" style="line-height:3px;">
@@ -486,7 +488,7 @@
 
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Somos un equipo <strong style="font-style:oblique;">nacido y crecido en el campo de acción</strong> literalmente y nos aseguramos de estar a la banguardia de la tecnología, esa integración  nos permite ofrecer <strong  style="font-style:oblique;">tecnologías renovables y sostenibles</strong> al planeta.</p>
+          <p class="large text-muted">Somos un equipo <strong style="font-style:oblique;">nacido y crecido en el campo de acción</strong> literalmente y nos aseguramos de estar a la vanguardia de la tecnología, esa integración  nos permite ofrecer <strong  style="font-style:oblique;">tecnologías renovables y sostenibles</strong> al planeta.</p>
         </div>
       </div>
     </div>
@@ -503,39 +505,39 @@
       <div class="row">
         <div class="col-md-3 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/envato.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/envato.jpg' %}" alt="">
           </a>
         </div>
         <div class="col-md-3 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/designmodo.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/designmodo.jpg' %}" alt="">
           </a>
         </div>
         <div class="col-md-3 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/themeforest.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/themeforest.jpg' %}" alt="">
           </a>
         </div>
         <div class="col-md-3 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/creative-market.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/creative-market.jpg' %}" alt="">
           </a>
       </div>
     </div> <br>
     <div class="row align-items-center">      
         <div class="col-md-4 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/unc-rfcl.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/unc-rfcl.jpg' %}" alt="">
           </a>
         </div>      
         <div class="col-md-4 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/unt-grcl.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/unt-grcl.jpg' %}" alt="">
           </a>
         </div>      
         <div class="col-md-4 col-sm-5">
           <a href="#">
-            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'img/logos/canvia.jpg' %}" alt="">
+            <img class="img-fluid d-block mx-auto" height="54px" width="140" src="{% static 'st_i/img/logos/canvia.jpg' %}" alt="">
           </a>
         </div>  
     </div>
@@ -623,7 +625,7 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                 <div class="card" style="height: 310px; width: 200px; margin: 3px;">
                     <!--p><strong>Administrador</strong></p-->
-                    <img src="{% static 'img/cber.png' %}" class="w-100 img-thumbnail" style="height: 150px; width: 150px;">
+                    <img src="{% static 'st_i/img/cber.png' %}" class="w-100 img-thumbnail" style="height: 150px; width: 150px;">
 
                     <div class="card-body">
                     <h5 class="card-title">Restringido</h5>
@@ -698,7 +700,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Biodigestor Familiar</h2>
                 <p class="item-intro text-muted">En la localidad de Yanacancha, perteneciente a la serrania de Cajamarca.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/01-full.jpg' %}" alt="">
+                <img class="img-fluid d-block mx-auto" src="{% static 'st_i/img/portfolio/01-full.jpg' %}" alt="">
                 <p>Se realizó un proyecto para mejorar la calidad de vida de los pobladores, el cual se llevó a cabo con todo éxito.
                   <br>
                   Este proyecto consistia en la implementación de <strong>BIODIGESTORES</strong> <i class="text-italik"> (reactores que producen gas a base de deshechos.)</i>, lo cual contribuyó exitosamente a cada una de las familias involucradas.</p>
@@ -734,7 +736,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/02-full.jpg' %}" alt="">
+                <img class="img-fluid d-block mx-auto" src="{% static 'st_i/img/portfolio/02-full.jpg' %}" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
@@ -768,7 +770,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/03-full.jpg' %}" alt="">
+                <img class="img-fluid d-block mx-auto" src="{% static 'st_i/img/portfolio/03-full.jpg' %}" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
@@ -802,7 +804,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/04-full.jpg' %}" alt="">
+                <img class="img-fluid d-block mx-auto" src="{% static 'st_i/img/portfolio/04-full.jpg' %}" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
@@ -836,7 +838,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/05-full.jpg' %}" alt="">
+                <img class="img-fluid d-block mx-auto" src="{% static 'st_i/img/portfolio/05-full.jpg' %}" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
@@ -870,7 +872,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Project Name</h2>
                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                <img class="img-fluid d-block mx-auto" src="{% static 'img/portfolio/06-full.jpg' %}" alt="">
+                <img class="img-fluid d-block mx-auto" src="{% static 'st_i/img/portfolio/06-full.jpg' %}" alt="">
                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                 <ul class="list-inline">
                   <li>Date: January 2017</li>
@@ -889,19 +891,19 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'st_i/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'st_i/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'st_i/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
   <!-- Contact form JavaScript>
-  <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-  <script src="{% static 'js/contact_me.js' %}"></script -->
+  <script src="{% static 'st_i/js/jqBootstrapValidation.js' %}"></script>
+  <script src="{% static 'st_i/js/contact_me.js' %}"></script -->
 
   <!-- Custom scripts for this template -->
-  <script src="{% static 'js/agency.min.js' %}"></script>
-  <script src="{% static 'js/app.js' %}"></script>
+  <script src="{% static 'st_i/js/agency.min.js' %}"></script>
+  <script src="{% static 'st_i/js/app.js' %}"></script>
 
 </body>
 
